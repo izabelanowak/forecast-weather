@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./rootSaga";
-import forecastWeatherReducer from "../features/ForecastWeather/ForecastWeatherSlice";
+import forecastWeatherReducer from "../features/forecastWeather/ForecastWeatherSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
