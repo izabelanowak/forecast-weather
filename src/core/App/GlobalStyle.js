@@ -13,5 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Nunito Sans', sans-serif;
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.textPrimary};
   }
 `;
