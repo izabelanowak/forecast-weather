@@ -24,6 +24,7 @@ export const themeLight = {
         textSecondary: colorNames.yellowOrange,
         button: colorNames.yellowOrange,
         shadow: colorNames.periwinkleGray,
+        accent: colorNames.yellowOrange,
         tile: {
             background: colorNames.periwinkleGray,
             date: {
@@ -42,6 +43,7 @@ export const themeDark = {
         textSecondary: colorNames.periwinkleGray,
         button: colorNames.periwinkleGray,
         shadow: colorNames.yellowOrange,
+        accent: colorNames.yellowOrange,
         tile: {
             background: colorNames.portica,
             date: {
