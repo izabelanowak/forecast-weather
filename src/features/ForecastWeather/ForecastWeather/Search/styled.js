@@ -13,6 +13,11 @@ export const Input = styled.input`
   border-radius: 40px;
   border: 1px solid white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: none;
+
+  &:hover {
+    box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
+  }
 `;
 
 export const Icon = styled(SearchIcon)``;
@@ -29,11 +34,11 @@ export const Button = styled.button`
   padding: 20px;
   border-radius: 40px;
   border: none;
-  background: #3C99DD;
+  background: ${({theme})=> theme.colors.button};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
 
   &:hover {
-    transform: scale(1.05);
+    box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
   }
 `;
