@@ -12,6 +12,10 @@ export const Wrapper = styled.div`
   margin: 0 10px;
   opacity: 0.8;
   font-weight: bold;
+
+  &:hover {
+    box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
+  }
 `;
 
 export const Title = styled.div``;
