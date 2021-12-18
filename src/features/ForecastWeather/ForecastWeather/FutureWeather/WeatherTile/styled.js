@@ -57,6 +57,10 @@ export const Temperature = styled.div`
   padding: 10px;
   font-weight: bold;
   flex-basis: 220px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    flex-basis: unset;
+  }
 `;
 
 export const Description = styled.p`
