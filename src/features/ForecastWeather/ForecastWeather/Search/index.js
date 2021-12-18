@@ -16,7 +16,6 @@ export const Search = () => {
     event.preventDefault();
 
     dispatch(setCity(query));
-    dispatch(setQuery(""));
   };
 
   useEffect(() => {
