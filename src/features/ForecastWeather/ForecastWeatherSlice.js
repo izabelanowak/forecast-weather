@@ -4,7 +4,8 @@ const forecastWeatherSlice = createSlice({
   name: "forecastWeather",
   initialState: {
     weather: [],
-    loading: true,
+    loading: false,
+    success: false,
     error: false,
     query: "",
     city: "",
@@ -16,11 +17,13 @@ const forecastWeatherSlice = createSlice({
     fetchWeatherSuccess: (state, { payload: weather }) => {
       state.weather = weather;
       state.loading = false;
+      state.success = true;
       state.error = false;
       state.query = "";
     },
     fetchWeatherError: (state) => {
       state.loading = false;
+      state.success = false;
       state.error = true;
     },
     setQuery: (state, { payload: query }) => {
@@ -44,6 +47,7 @@ const selectForecastWeatherState = state => state.forecastWeather;
 
 export const selectWeather = state => selectForecastWeatherState(state).weather;
 export const selectLoading = state => selectForecastWeatherState(state).loading;
+export const selectSuccess = state => selectForecastWeatherState(state).success;
 export const selectError = state => selectForecastWeatherState(state).error;
 export const selectQuery = (state) => selectForecastWeatherState(state).query;
 export const selectCity = (state) => selectForecastWeatherState(state).city;
