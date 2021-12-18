@@ -11,4 +11,6 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h2`
   font-size: 32px;
+  display: flex;
+  justify-content: center;
 `;
