@@ -11,7 +11,7 @@ export const CityWeather = () => {
 
   return (
     <>
-      <Title>Current weather for <CityName>{weather.city.name}</CityName></Title>
+      <Title>Current weather for&nbsp;<CityName>{weather.city.name}</CityName></Title>
       <Wrapper>
         {weather.length === 0 ?
           <></>
