@@ -25,10 +25,12 @@ export const TimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0 20px 0 10px;
+  margin: 0 10px 0 0;
+  flex-basis: 150px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
       align-items: center;
+      flex-basis: unset;
   }
 `;
 
