@@ -1,12 +1,16 @@
-import { Wrapper, Date, StyledIcon, Temperature, TemperatureUnit, Description } from "./styled";
+import { formatDate } from "../formatDate";
+import { Wrapper, StyledDate, Temperature, TemperatureUnit, Description } from "./styled";
+import { switchIcon } from "./switchIcon";
 
-export const Tile = () => {
+export const Tile = ({ iconCode, timestamp, temperature, description }) => {
+  const date = new Date(timestamp);
+
   return (
     <Wrapper>
-      <Date>Friday, 17 December 2021 </Date>
-      <StyledIcon />
-      <Temperature>23<TemperatureUnit/></Temperature>
-      <Description>Clouds</Description>
+      <StyledDate>{formatDate(date)}</StyledDate>
+      {switchIcon(iconCode)}
+      <Temperature>{Math.round(temperature)}<TemperatureUnit /></Temperature>
+      <Description>{description}</Description>
     </Wrapper>
   );
 };
