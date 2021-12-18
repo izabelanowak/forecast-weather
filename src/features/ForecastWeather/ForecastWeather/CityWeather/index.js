@@ -26,30 +26,29 @@ export const CityWeather = () => {
         }
         <DataTileWrapper>
           <DataTile
-            type="sunrise"
-            data={`${sunrise.getHours()}:${sunrise.getMinutes() < 10 ? "0" : ""}${sunrise.getMinutes()}`}
-          />
-          <DataTile
             type="humidity"
             data={`${weather.list[0].main.humidity} %`}
-          />
-          <DataTile
-            type="pressure"
-            data={`${weather.list[0].main.pressure} hPa`}
-          />
-          <DataTile
-            type="sunset"
-            data={`${sunset.getHours()}:${sunset.getMinutes() < 10 ? "0" : ""}${sunset.getMinutes()}`}
           />
           <DataTile
             type="precipitation"
             data={`${weather.list[0].pop * 100} %`}
           />
           <DataTile
+            type="pressure"
+            data={`${weather.list[0].main.pressure} hPa`}
+          />
+          <DataTile
             type="wind"
             data={`${weather.list[0].wind.speed} km/h`}
           />
-
+          <DataTile
+            type="sunrise"
+            data={`${sunrise.getHours()}:${sunrise.getMinutes() < 10 ? "0" : ""}${sunrise.getMinutes()}`}
+          />
+          <DataTile
+            type="sunset"
+            data={`${sunset.getHours()}:${sunset.getMinutes() < 10 ? "0" : ""}${sunset.getMinutes()}`}
+          />
         </DataTileWrapper>
       </Wrapper>
     </>
