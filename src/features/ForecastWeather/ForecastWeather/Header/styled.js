@@ -11,6 +11,12 @@ export const Title = styled.h1`
   font-size: 56px;
   margin: 20px 40px;
   padding: 10px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 32px;
+    margin: 5px 10px;
+    padding: 2px;
+    }
 `;
 
 export const RainyIcon = styled(Rainy)`

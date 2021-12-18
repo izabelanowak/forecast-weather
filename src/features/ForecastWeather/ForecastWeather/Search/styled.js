@@ -6,6 +6,12 @@ export const Wrapper = styled.form`
   grid-template-columns: 1fr auto;
   grid-gap: 20px;
   padding: 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    grid-template-columns: 1fr;
+    grid-gap: 6px;
+    padding: 6px;
+  }
 `;
 
 export const Input = styled.input`
@@ -27,6 +33,7 @@ export const Button = styled.button`
   grid-template-columns: auto auto;
   grid-gap: 10px;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
   font-size: 20px;
   text-transform: uppercase;
