@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 0 10px;
   opacity: 0.8;
-  max-width: 300px;
 `;
 
 export const StyledDate = styled.div`
