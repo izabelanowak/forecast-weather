@@ -19,6 +19,7 @@ const colorNames = {
 export const themeLight = {
     ...common,
     colors: {
+        white: colorNames.white,
         background: colorNames.gallery,
         textPrimary: colorNames.mineShaft,
         textSecondary: colorNames.yellowOrange,
@@ -38,6 +39,7 @@ export const themeLight = {
 export const themeDark = {
     ...common,
     colors: {
+        white: colorNames.white,
         background: colorNames.tangaroa,
         textPrimary: colorNames.gallery,
         textSecondary: colorNames.periwinkleGray,
