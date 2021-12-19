@@ -15,7 +15,7 @@ export const Wrapper = styled.form`
 `;
 
 export const Input = styled.input`
-  padding: 20px;
+  padding: 10px;
   border-radius: 40px;
   border: 1px solid white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -38,7 +38,7 @@ export const Button = styled.button`
   font-size: 20px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 20px;
+  padding: 10px;
   border-radius: 40px;
   border: none;
   background: ${({theme})=> theme.colors.button};
