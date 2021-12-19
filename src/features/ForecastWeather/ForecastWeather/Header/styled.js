@@ -17,7 +17,8 @@ export const Title = styled.h1`
     font-size: 32px;
     margin: 5px 10px;
     padding: 2px;
-    }
+    text-align: center;
+  }
 `;
 
 export const RainyIcon = styled(Rainy)`
