@@ -29,8 +29,8 @@ export const TimeWrapper = styled.div`
   flex-basis: 150px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-      align-items: center;
-      flex-basis: unset;
+    align-items: center;
+    flex-basis: unset;
   }
 `;
 
