@@ -24,6 +24,7 @@ export const themeLight = {
         background: colorNames.gallery,
         textPrimary: colorNames.mineShaft,
         textSecondary: colorNames.yellowOrange,
+        titleText: colorNames.mineShaft,
         button: colorNames.yellowOrange,
         shadow: colorNames.periwinkleGray,
         accent: colorNames.yellowOrange,
@@ -42,15 +43,16 @@ export const themeDark = {
     colors: {
         white: colorNames.white,
         background: colorNames.tangaroa,
-        textPrimary: colorNames.gallery,
+        textPrimary: colorNames.mineShaft,
         textSecondary: colorNames.periwinkleGray,
+        titleText: colorNames.gallery,
         button: colorNames.periwinkleGray,
         shadow: colorNames.yellowOrange,
         accent: colorNames.yellowOrange,
         tile: {
-            background: colorNames.portica,
+            background: colorNames.periwinkleGray,
             date: {
-                background: colorNames.portica,
+                background: colorNames.gallery,
                 border: colorNames.yellowOrange,
             },
         },
