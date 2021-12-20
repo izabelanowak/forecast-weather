@@ -13,6 +13,18 @@ export const Title = styled.h2`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     font-size: 20px;
-    margin-bottom: 30px;
+  }
+`;
+
+export const Subtitle = styled.h3`
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.titleText};
+  font-weight: normal;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 `;

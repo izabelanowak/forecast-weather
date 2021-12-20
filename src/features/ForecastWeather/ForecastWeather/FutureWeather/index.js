@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { calculateAveragePressure, selectAveragePressure, selectWeather } from "../../ForecastWeatherSlice";
 import { DataTile } from "../DataTile";
-import { Title, Wrapper } from "./styled";
+import { Subtitle, Title, Wrapper } from "./styled";
 import { WeatherTile } from "../WeatherTile";
 
 export const FutureWeather = () => {
@@ -12,6 +12,7 @@ export const FutureWeather = () => {
   return (
     <>
       <Title>Future Weather</Title>
+      <Subtitle>for 5 days with data every 3 hours</Subtitle>
       <Wrapper>
         <DataTile
           type="pressure"
