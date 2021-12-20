@@ -68,4 +68,9 @@ export const Temperature = styled.div`
 
 export const Description = styled.p`
   font-size: 18px;
+  flex-basis: 220px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    flex-basis: unset;
+  }
 `;
