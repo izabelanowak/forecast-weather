@@ -15,18 +15,21 @@ export const Wrapper = styled.form`
 `;
 
 export const Input = styled.input`
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 40px;
   border: 1px solid white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   outline: none;
+  font-family: 'Cousine', monospace;
 
   &:hover {
     box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
   }
 `;
 
-export const Icon = styled(SearchIcon)``;
+export const Icon = styled(SearchIcon)`
+  width: 20px;
+`;
 
 export const Button = styled.button`
   display: grid;
@@ -35,10 +38,10 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 40px;
   border: none;
   background: ${({theme})=> theme.colors.button};
