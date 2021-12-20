@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { ReactComponent as Sunny } from "./sunny.svg";
-import { ReactComponent as Rainy } from "./rainyNight.svg";
+import { ReactComponent as Thunderstorm } from "./icons/thunderstorm.svg";
+import { ReactComponent as Rainy } from "./icons/rainyNight.svg";
 
 export const Wrapper= styled.header`
   display: flex;
@@ -29,10 +29,10 @@ export const RainyIcon = styled(Rainy)`
 }
 
 `;
-export const SunnyIcon = styled(Sunny)`
+export const ThunderstormIcon = styled(Thunderstorm)`
   transition: transform 1s;
 
 &:hover {
-  transform: rotate(360deg);
+  transform: translate(-20px);
 }`;
 
