@@ -1,4 +1,3 @@
-import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { calculateAveragePressure, selectAveragePressure, selectWeather } from "../../ForecastWeatherSlice";
 import { DataTile } from "../DataTile";
