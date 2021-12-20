@@ -18,13 +18,9 @@ const ForecastWeather = () => {
       <ThemeSwitcher />
       <Header />
       <Search />
-      <StatusChecker isError={isError} isLoading={isLoading}>
-        {isSuccess ?
-          <>
-            <CityWeather />
-            <FutureWeather />
-          </>
-          : <></>}
+      <StatusChecker isError={isError} isLoading={isLoading} isSuccess={isSuccess}>
+        <CityWeather />
+        <FutureWeather />
       </StatusChecker>
     </MainContainer>
   );
