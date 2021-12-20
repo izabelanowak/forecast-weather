@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/forecast-weather/static/js/main.e742b3b4.chunk.js",
-    "main.js.map": "/forecast-weather/static/js/main.e742b3b4.chunk.js.map",
+    "main.js": "/forecast-weather/static/js/main.4f89c0e5.chunk.js",
+    "main.js.map": "/forecast-weather/static/js/main.4f89c0e5.chunk.js.map",
     "runtime-main.js": "/forecast-weather/static/js/runtime-main.d6528fe7.js",
     "runtime-main.js.map": "/forecast-weather/static/js/runtime-main.d6528fe7.js.map",
     "static/js/2.32fc92f7.chunk.js": "/forecast-weather/static/js/2.32fc92f7.chunk.js",
@@ -28,23 +28,23 @@
     "static/media/13n.484452d3.svg": "/forecast-weather/static/media/13n.484452d3.svg",
     "static/media/50d.961ed662.svg": "/forecast-weather/static/media/50d.961ed662.svg",
     "static/media/50n.51eda911.svg": "/forecast-weather/static/media/50n.51eda911.svg",
-    "static/media/Danger.67704290.svg": "/forecast-weather/static/media/Danger.67704290.svg",
     "static/media/celsius.3ced5b00.svg": "/forecast-weather/static/media/celsius.3ced5b00.svg",
     "static/media/daynight.84cf2c2c.svg": "/forecast-weather/static/media/daynight.84cf2c2c.svg",
     "static/media/humidity.c94fc289.svg": "/forecast-weather/static/media/humidity.c94fc289.svg",
     "static/media/icon-spinner.91059d0a.svg": "/forecast-weather/static/media/icon-spinner.91059d0a.svg",
+    "static/media/lightning.1df3f7b3.svg": "/forecast-weather/static/media/lightning.1df3f7b3.svg",
     "static/media/precipitation.607d8c5b.svg": "/forecast-weather/static/media/precipitation.607d8c5b.svg",
     "static/media/pressure.e654d2e2.svg": "/forecast-weather/static/media/pressure.e654d2e2.svg",
     "static/media/rainyNight.95c7ad93.svg": "/forecast-weather/static/media/rainyNight.95c7ad93.svg",
     "static/media/search.878026b9.svg": "/forecast-weather/static/media/search.878026b9.svg",
-    "static/media/sunny.270f4970.svg": "/forecast-weather/static/media/sunny.270f4970.svg",
     "static/media/sunrise.8b72d66b.svg": "/forecast-weather/static/media/sunrise.8b72d66b.svg",
     "static/media/sunset.05389131.svg": "/forecast-weather/static/media/sunset.05389131.svg",
+    "static/media/thunderstorm.fa5fe5c2.svg": "/forecast-weather/static/media/thunderstorm.fa5fe5c2.svg",
     "static/media/wind.300a4c37.svg": "/forecast-weather/static/media/wind.300a4c37.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.d6528fe7.js",
     "static/js/2.32fc92f7.chunk.js",
-    "static/js/main.e742b3b4.chunk.js"
+    "static/js/main.4f89c0e5.chunk.js"
   ]
 }
