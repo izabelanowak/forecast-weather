@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { selectWeather } from "../../ForecastWeatherSlice";
 import { CityName, DataTileWrapper, Title, Wrapper } from "./styled";
-import { Tile } from "../Tile";
 import { DataTile } from "../DataTile";
+import { WeatherTile } from "../WeatherTile";
 
 export const CityWeather = () => {
   const weather = useSelector(selectWeather);
@@ -16,7 +16,7 @@ export const CityWeather = () => {
         {weather.length === 0 ?
           <></>
           :
-          <Tile
+          <WeatherTile
             key={weather.list[0].dt}
             timestamp={weather.list[0].dt * 1000}
             iconCode={weather.list[0].weather[0].icon}

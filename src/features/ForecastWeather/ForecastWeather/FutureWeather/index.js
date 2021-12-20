@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { calculateAveragePressure, selectAveragePressure, selectWeather } from "../../ForecastWeatherSlice";
 import { DataTile } from "../DataTile";
 import { Title, Wrapper } from "./styled";
-import { WeatherTile } from "./WeatherTile";
+import { WeatherTile } from "../WeatherTile";
 
 export const FutureWeather = () => {
   const weather = useSelector(selectWeather);
@@ -25,6 +25,7 @@ export const FutureWeather = () => {
             iconCode={weather.weather[0].icon}
             temperature={weather.main.temp}
             description={`${weather.weather[0].main} - ${weather.weather[0].description}`}
+            future={true}
           />
         )}
       </Wrapper>
