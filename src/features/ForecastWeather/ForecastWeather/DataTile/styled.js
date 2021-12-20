@@ -18,5 +18,11 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Title = styled.div``;
-export const Data = styled.div``;
+export const Title = styled.div`
+  text-align: center;
+  margin-bottom: 6px;
+`;
+
+export const Data = styled.div`
+  margin-top: 6px;
+`;
