@@ -42,7 +42,7 @@ const forecastWeatherSlice = createSlice({
       var sum = arr.reduce(function (a, b) {
         return a + b;
       });
-      state.averagePressure = sum / arr.length;
+      state.averagePressure = (sum / arr.length).toFixed(1);
     },
   },
 });

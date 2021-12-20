@@ -21,17 +21,17 @@ export const CityWeather = () => {
             timestamp={weather.list[0].dt * 1000}
             iconCode={weather.list[0].weather[0].icon}
             temperature={weather.list[0].main.temp}
-            description={`${weather.list[0].weather[0].main} - ${weather.list[0].weather[0].description}`}
+            description={`${weather.list[0].weather[0].description}`}
           />
         }
         <DataTileWrapper>
           <DataTile
             type="humidity"
-            data={`${weather.list[0].main.humidity} %`}
+            data={`${Math.round(weather.list[0].main.humidity)} %`}
           />
           <DataTile
             type="precipitation"
-            data={`${weather.list[0].pop * 100} %`}
+            data={`${Math.round(weather.list[0].pop * 100)} %`}
           />
           <DataTile
             type="pressure"

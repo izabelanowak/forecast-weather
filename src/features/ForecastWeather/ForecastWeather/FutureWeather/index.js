@@ -25,7 +25,7 @@ export const FutureWeather = () => {
             timestamp={weather.dt * 1000}
             iconCode={weather.weather[0].icon}
             temperature={weather.main.temp}
-            description={`${weather.weather[0].main} - ${weather.weather[0].description}`}
+            description={`${weather.weather[0].description}`}
             future={true}
           />
         )}
