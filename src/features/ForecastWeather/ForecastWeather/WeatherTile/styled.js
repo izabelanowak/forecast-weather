@@ -50,7 +50,6 @@ export const Weekday = styled.span`
 
 export const DateWrapper = styled.div`
   background: ${({ theme }) => theme.colors.tile.date.background};
-  opacity: 0.9;
   border-radius: 40px;
   padding: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
