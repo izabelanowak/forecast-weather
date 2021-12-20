@@ -89,6 +89,8 @@ export const Temperature = styled.div`
 
 export const Description = styled.p`
   font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
   
   ${({ future }) => future && css`
     flex-basis: 220px;
