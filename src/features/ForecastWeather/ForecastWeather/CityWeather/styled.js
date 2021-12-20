@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 300px 1fr;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.desktopSmall}px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -32,7 +32,8 @@ export const DataTileWrapper = styled.div`
   grid-template-rows: repeat(2,1fr);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.desktopSmall}px) {
-    grid-template-columns: repeat(2,1fr);
+    margin-top: 10px;
+    grid-template-columns: repeat(3,1fr);
     grid-gap: 4px;
   }
 
