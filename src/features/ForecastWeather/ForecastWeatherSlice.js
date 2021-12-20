@@ -9,6 +9,7 @@ const forecastWeatherSlice = createSlice({
     error: false,
     query: "",
     city: "",
+    averagePressure: null,
   },
   reducers: {
     fetchWeather: (state) => {
@@ -32,6 +33,17 @@ const forecastWeatherSlice = createSlice({
     setCity: (state, { payload: query }) => {
       state.city = query;
     },
+    calculateAveragePressure: (state) => {
+      const table = state.weather.list;
+      const arr = [];
+      for (const element of table) {
+        arr.push(element.main.pressure);
+      }
+      var sum = arr.reduce(function (a, b) {
+        return a + b;
+      });
+      state.averagePressure = sum / arr.length;
+    },
   },
 });
 
@@ -41,6 +53,7 @@ export const {
   fetchWeatherError,
   setQuery,
   setCity,
+  calculateAveragePressure,
 } = forecastWeatherSlice.actions;
 
 const selectForecastWeatherState = state => state.forecastWeather;
@@ -51,5 +64,6 @@ export const selectSuccess = state => selectForecastWeatherState(state).success;
 export const selectError = state => selectForecastWeatherState(state).error;
 export const selectQuery = (state) => selectForecastWeatherState(state).query;
 export const selectCity = (state) => selectForecastWeatherState(state).city;
+export const selectAveragePressure = (state) => selectForecastWeatherState(state).averagePressure;
 
 export default forecastWeatherSlice.reducer;
