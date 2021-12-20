@@ -54,6 +54,7 @@ export const DateWrapper = styled.div`
   padding: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-top: -10px;
+  margin-bottom: 50px;
   border: 2px solid ${({ theme }) => theme.colors.tile.date.border};
   font-size: 12px;
 `;
