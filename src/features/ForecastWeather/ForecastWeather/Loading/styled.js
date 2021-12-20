@@ -21,7 +21,7 @@ export const LoadingContainer = styled.div`
 `;
 
 export const LoadingInfo = styled.p`
-  color: ${({ theme }) => theme.colors.textPrimary};
+  color: ${({ theme }) => theme.colors.titleText};
   font-size: 20px;
   line-height: 1.4;
   margin-bottom: 48px;
