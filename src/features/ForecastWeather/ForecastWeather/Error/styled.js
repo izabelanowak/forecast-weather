@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Error } from "./Danger.svg";
+import { ReactComponent as Error } from "./lightning.svg";
 
 export const Wrapper = styled.div`
   margin: 0 auto;
@@ -14,9 +14,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ErrorIcon = styled(Error)`
-  stroke: ${({ theme }) => theme.colors.titleText};
-`;
+export const ErrorIcon = styled(Error)``;
 
 export const Title = styled.h2`
   font-weight: bold;
