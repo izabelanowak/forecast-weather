@@ -1,12 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeather, selectCity, selectQuery, setCity, setQuery } from "../../ForecastWeatherSlice";
 import { Button, Icon, Input, Wrapper } from "./styled";
 
 export const Search = () => {
   const query = useSelector(selectQuery);
-  const dispatch = useDispatch();
   const city = useSelector(selectCity);
+  const inputRef = useRef(null);
+  const dispatch = useDispatch();
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
 
   const onChange = (value) => {
     dispatch(setQuery(value));
@@ -29,9 +34,11 @@ export const Search = () => {
       <Input
         placeholder="Type your city…"
         value={query}
+        ref={inputRef}
+        autoFocus
         onChange={({ target }) => onChange(target.value)}
       />
-      <Button><Icon />Search</Button>
+      <Button onClick={focusInput}><Icon />Search</Button>
     </Wrapper>
   );
 };
