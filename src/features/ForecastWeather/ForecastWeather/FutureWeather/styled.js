@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   display: grid;
@@ -33,4 +33,8 @@ export const MiniTileWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  ${({ hide }) => hide && css`
+    display: none;
+  `}
 `;
