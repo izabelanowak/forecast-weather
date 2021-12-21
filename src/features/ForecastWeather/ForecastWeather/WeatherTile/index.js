@@ -27,12 +27,6 @@ export const WeatherTile = ({ timestamp, iconCode, temperature, minTemperature, 
         <Description>{description}</Description>
       </WeatherWrapper>
       :
-      day ?
-        <TimeWrapper>
-          <Weekday>{getWeekday(date)}</Weekday>
-          <StyledDate>{getDate(date)}</StyledDate>
-        </TimeWrapper>
-        :
         future ?
           <>
             <WeatherWrapper>
