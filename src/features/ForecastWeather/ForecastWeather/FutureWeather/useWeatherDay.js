@@ -10,13 +10,13 @@ const isDayNumber = (timestamp, dayNumber) => {
   const today = currentDate.getDate();
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
-  const currentUTCHours = currentDate.getUTCHours();
+  const currentUTCHours = currentDate.getHours();
   const date = new Date(timestamp * 1000);
   const day = date.getDate();
   const month = date.getMonth();
   const daysOfMonth = getDaysInMonth(currentMonth, currentYear);
 
-  if (currentUTCHours >= 21) {
+  if (currentUTCHours >= 22) {
     dayNumber = dayNumber + 1;
   }
 
@@ -42,8 +42,6 @@ const createDay = (table, dayNumber) => {
   }
   return [day, temperature];
 };
-
-
 
 export const useWatherDay = (dayNumber) => {
   const weather = useSelector(selectWeather);
