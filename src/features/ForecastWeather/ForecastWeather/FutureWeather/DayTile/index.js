@@ -27,16 +27,20 @@ export const DayTile = ({ dayNumber, general }) => {
         id="hourly-forecast"
         hide={!moreInformation}
       >
-        {weatherDay.map(weather =>
+        <WeatherTile
+          day
+          timestamp={weatherDay[0].dt * 1000}
+        />
+        {weatherDay.map(({ dt, icon, temp, description }) => (
           <WeatherTile
-            key={weather.dt}
-            timestamp={weather.dt * 1000}
-            iconCode={weather.icon}
-            temperature={weather.temp}
-            description={weather.description}
+            key={dt}
+            timestamp={dt * 1000}
+            iconCode={icon}
+            temperature={temp}
+            description={description}
             mini="true"
           />
-        )}
+        ))}
       </MiniTileWrapper>
   );
 };
