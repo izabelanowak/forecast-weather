@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 export const WeatherWrapper = styled(Wrapper)`
   padding: 10px;
   font-weight: bold;
+  background: ${({ theme }) => theme.colors.white};
 
   &:hover {
     box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
