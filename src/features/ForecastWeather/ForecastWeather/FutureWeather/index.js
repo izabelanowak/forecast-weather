@@ -17,7 +17,7 @@ export const FutureWeather = () => {
       <Wrapper>
         <DataTile
           type="pressure"
-          subtitle="Average pressure for the week"
+          subtitle="Average pressure for 5 days"
           data={`${averagePressure} hPa`}
         />
         <MiniTileWrapper>
