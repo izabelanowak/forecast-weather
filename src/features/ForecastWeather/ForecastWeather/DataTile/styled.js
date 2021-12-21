@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 10px;
-  opacity: 0.8;
   font-weight: bold;
 
   &:hover {
