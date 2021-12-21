@@ -1,5 +1,6 @@
 const common = {
     breakpoints: {
+        mobileSmall: 532,
         mobile: 767,
         tablet: 991,
         desktopSmall: 1199,
