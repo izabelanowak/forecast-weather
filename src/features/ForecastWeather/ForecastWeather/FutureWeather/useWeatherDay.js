@@ -17,7 +17,7 @@ const createDay = (table, dayNumber) => {
         dt: element.dt,
         icon: element.weather[0].icon,
         temp: element.main.temp,
-        description: element.weather[0].main,
+        description: element.weather[0].description,
       });
     }
   }
