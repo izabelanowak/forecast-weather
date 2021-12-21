@@ -1,5 +1,5 @@
 import { WeatherTile } from "../../WeatherTile";
-import { DayWrapper, MiniTileWrapper } from "../styled";
+import { MiniTileWrapper } from "../styled";
 import { useWatherDay } from "../useWeatherDay";
 
 export const DayTile = ({ dayNumber }) => {
