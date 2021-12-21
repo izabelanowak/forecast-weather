@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 10px;
   font-weight: bold;
+  max-width: 300px;
 
   &:hover {
     box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
