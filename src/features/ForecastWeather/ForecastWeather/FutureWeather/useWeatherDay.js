@@ -1,12 +1,24 @@
 import { useSelector } from "react-redux";
 import { selectWeather } from "../../ForecastWeatherSlice";
 
+const getDaysInMonth = (month, year) => {
+  return new Date(year, month, 0).getDate();
+};
+
 const isDayNumber = (timestamp, dayNumber) => {
   const currentDate = new Date();
   const today = currentDate.getDate();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
   const date = new Date(timestamp * 1000);
   const day = date.getDate();
-  return day === today + dayNumber;
+  const month = date.getMonth();
+  const daysOfMonth = getDaysInMonth(currentMonth, currentYear);
+
+  if (currentMonth === month) {
+    return day === today + dayNumber;
+  }
+  return day + daysOfMonth === today + dayNumber;
 };
 
 const createDay = (table, dayNumber) => {
