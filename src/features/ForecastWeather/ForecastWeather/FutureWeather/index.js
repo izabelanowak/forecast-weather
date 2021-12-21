@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { calculateAveragePressure, selectAveragePressure } from "../../ForecastWeatherSlice";
+import { calculateAveragePressure, selectAveragePressure, selectDayNumber, selectMoreInformation } from "../../ForecastWeatherSlice";
 import { DataTile } from "../DataTile";
-import { Subtitle, Title, Wrapper } from "./styled";
+import { MiniTileWrapper, Subtitle, Title, Wrapper } from "./styled";
 import { DayTile } from "./DayTile";
 
 export const FutureWeather = () => {
   const averagePressure = useSelector(selectAveragePressure);
+  const dayToShow = useSelector(selectDayNumber);
+  const moreInformation = useSelector(selectMoreInformation);
   const dispatch = useDispatch();
 
   dispatch(calculateAveragePressure());
@@ -19,21 +21,35 @@ export const FutureWeather = () => {
           subtitle="Average pressure for the week"
           data={`${averagePressure} hPa`}
         />
-        <DayTile
-          dayNumber={0}
-        />
-        <DayTile
-          dayNumber={1}
-        />
-        <DayTile
-          dayNumber={2}
-        />
-        <DayTile
-          dayNumber={3}
-        />
-        <DayTile
-          dayNumber={4}
-        />
+        <MiniTileWrapper>
+          <DayTile
+            dayNumber={0}
+            general={true}
+          />
+          <DayTile
+            dayNumber={1}
+            general={true}
+          />
+          <DayTile
+            dayNumber={2}
+            general={true}
+          />
+          <DayTile
+            dayNumber={3}
+            general={true}
+          />
+          <DayTile
+            dayNumber={4}
+            general={true}
+          />
+        </MiniTileWrapper>
+
+        {moreInformation ?
+          <DayTile
+            dayNumber={dayToShow}
+          />
+          : 
+          <></>}
       </Wrapper>
     </>
   );

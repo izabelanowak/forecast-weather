@@ -11,6 +11,7 @@ const isDayNumber = (timestamp, dayNumber) => {
 
 const createDay = (table, dayNumber) => {
   const day = [];
+  const temperature = [];
   for (const element of table) {
     if (isDayNumber(element.dt, dayNumber)) {
       day.push({
@@ -19,13 +20,25 @@ const createDay = (table, dayNumber) => {
         temp: element.main.temp,
         description: element.weather[0].description,
       });
+      temperature.push(element.main.temp);
     }
   }
-  return day;
+  return [day, temperature];
 };
+
+
 
 export const useWatherDay = (dayNumber) => {
   const weather = useSelector(selectWeather);
+  const [dayWeather, dayTemperature] = createDay(weather.list, dayNumber);
+  const minDayTemperature = Math.min(...dayTemperature);
+  const maxDayTemperature = Math.max(...dayTemperature);
+  const maxIndex = dayTemperature.indexOf(maxDayTemperature);
 
-  return createDay(weather.list, dayNumber);
+  return {
+    dayWeather,
+    minDayTemperature,
+    maxDayTemperature,
+    maxIndex,
+  };
 };
