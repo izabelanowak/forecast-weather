@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 300px 1fr;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.desktopSmall}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     grid-template-columns: 1fr;
   }
 `;

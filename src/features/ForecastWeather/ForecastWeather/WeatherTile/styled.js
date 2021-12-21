@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as Celsius } from "./icons/celsius.svg";
 
 export const Wrapper = styled.div`
@@ -10,7 +10,6 @@ export const Wrapper = styled.div`
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 10px;
-  opacity: 0.8;
 `;
 
 export const WeatherWrapper = styled(Wrapper)`
@@ -27,12 +26,21 @@ export const WeatherWrapper = styled(Wrapper)`
   }
 `;
 
+export const HorizontalWrapper = styled(Wrapper)`
+  flex-direction: row;
+  flex-basis: 100%;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    flex-direction: column;
+  }
+`;
+
 export const TimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 10px 10px 0 0;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
@@ -59,16 +67,24 @@ export const DateWrapper = styled.div`
 
 export const StyledDate = styled.span`
   padding: 5px;
+  color: ${({ theme }) => theme.colors.textSecondary}
 `;
 
 export const Time = styled.span`
   padding: 5px;
   margin-top: 10px;
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
 `;
 
 export const TemperatureUnit = styled(Celsius)`
   height: 100%;
+
+  ${({ mini }) => mini && css`
+    height: 40px;
+    margin-left: -15px;
+  `}
 `;
 
 export const Temperature = styled.div`
@@ -77,10 +93,27 @@ export const Temperature = styled.div`
   justify-content: center;
   padding: 10px;
   font-weight: bold;
+
+  ${({ mini }) => mini && css`
+    font-size: 36px;
+  `}
 `;
 
 export const Description = styled.p`
   font-size: 18px;
   text-transform: capitalize;
   font-weight: bold;
+
+  ${({ mini }) => mini && css`
+    font-size: 14px;
+    margin: 0;
+  `}
+`;
+
+export const Label = styled.span`
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 10px;
+  align-self: center;
 `;

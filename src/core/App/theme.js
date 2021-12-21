@@ -24,7 +24,7 @@ export const themeLight = {
         white: colorNames.white,
         background: colorNames.gallery,
         textPrimary: colorNames.mineShaft,
-        textSecondary: colorNames.yellowOrange,
+        textSecondary: colorNames.mineShaft,
         titleText: colorNames.mineShaft,
         button: colorNames.yellowOrange,
         shadow: colorNames.periwinkleGray,

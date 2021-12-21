@@ -7,6 +7,7 @@ export const Wrapper = styled.header`
   justify-content: center;
   padding: 20px;
 `;
+
 export const Title = styled.h1`
   display: flex;
   justify-content: center;
@@ -25,6 +26,9 @@ export const Title = styled.h1`
     font-size: 32px;
     margin: 5px 10px;
     padding: 2px;
+  }
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}px) {
+    font-size: 24px;
   }
 `;
 
@@ -59,4 +63,3 @@ export const ThunderstormIcon = styled(Thunderstorm)`
     max-height: 60px;
   }
 }`;
-
