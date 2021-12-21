@@ -24,7 +24,7 @@ export const WeatherTile =
     minTemperature,
     maxTemperature,
     description,
-    mini,
+    hourly,
     future,
     dayNumber,
     day
@@ -32,7 +32,7 @@ export const WeatherTile =
     const date = new Date(timestamp);
 
     return (
-      mini ?
+      hourly ?
         <HorizontalWrapper>
           <Time>{getTime(date)}</Time>
           {switchIcon(iconCode)}
@@ -66,11 +66,13 @@ export const WeatherTile =
               </WeatherWrapper>
             </>
             :
-            <Wrapper>
-              <DateWrapper>{formatDate(date)}</DateWrapper>
-              {switchIcon(iconCode)}
-              <Temperature>{Math.round(temperature)}<TemperatureUnit /></Temperature>
-              <Description>{description}</Description>
-            </Wrapper>
+            (
+              <Wrapper>
+                <DateWrapper>{formatDate(date)}</DateWrapper>
+                {switchIcon(iconCode)}
+                <Temperature>{Math.round(temperature)}<TemperatureUnit /></Temperature>
+                <Description>{description}</Description>
+              </Wrapper>
+            )
     );
   };

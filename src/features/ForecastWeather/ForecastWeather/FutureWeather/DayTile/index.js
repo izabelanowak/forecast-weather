@@ -38,7 +38,7 @@ export const DayTile = ({ dayNumber, general }) => {
             iconCode={icon}
             temperature={temp}
             description={description}
-            mini="true"
+            hourly
           />
         ))}
       </MiniTileWrapper>
