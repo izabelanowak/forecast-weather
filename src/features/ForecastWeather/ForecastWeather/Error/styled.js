@@ -14,7 +14,9 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const ErrorIcon = styled(Error)``;
+export const ErrorIcon = styled(Error)`
+  margin-bottom: 5px;
+`;
 
 export const Title = styled.h2`
   font-weight: bold;
