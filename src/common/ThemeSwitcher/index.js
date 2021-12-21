@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectIsDarkTheme, toogleTheme } from "../themeSlice";
-import { Button, Label, Wrapper, Icon} from "./styled";
+import { Button, Label, Wrapper, Icon } from "./styled";
 
 const ThemeSwitcher = () => {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ const ThemeSwitcher = () => {
     <Wrapper>
       <Button onClick={() => dispatch(toogleTheme())}>
         <Label>
-        {isDarkTheme ? "Night" : "Day"} mode on
+          {isDarkTheme ? "Night" : "Day"} mode on
         </Label>
         <Icon />
       </Button>

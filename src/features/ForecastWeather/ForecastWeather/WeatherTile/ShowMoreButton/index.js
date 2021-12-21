@@ -4,6 +4,7 @@ import { Button, Icon, Link } from "./styled";
 
 export const ShowMoreButton = ({ dayNumber }) => {
   const dispatch = useDispatch();
+  
   return (
     <Link href="#hourly-forecast" >
       <Button onClick={() => dispatch(showHourlyForecast(dayNumber))}>

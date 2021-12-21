@@ -23,7 +23,7 @@ export const Input = styled.input`
   font-family: 'Cousine', monospace;
 
   &:hover {
-    box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
+    box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   }
 `;
 
@@ -44,11 +44,11 @@ export const Button = styled.button`
   padding: 10px 20px;
   border-radius: 40px;
   border: none;
-  background: ${({theme})=> theme.colors.button};
+  background: ${({ theme }) => theme.colors.button};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transition: 0.3s;
 
   &:hover {
-    box-shadow: 0px 4px 4px ${({theme})=> theme.colors.shadow};
+    box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   }
 `;

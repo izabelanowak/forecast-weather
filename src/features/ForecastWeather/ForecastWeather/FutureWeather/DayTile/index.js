@@ -19,7 +19,7 @@ export const DayTile = ({ dayNumber, general }) => {
         iconCode={weatherDay[index].icon}
         minTemperature={minDayTemperature}
         maxTemperature={maxDayTemperature}
-        future={true}
+        future
         dayNumber={dayNumber}
       />
       :

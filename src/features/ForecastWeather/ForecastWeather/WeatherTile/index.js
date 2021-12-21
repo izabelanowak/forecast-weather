@@ -47,24 +47,22 @@ export const WeatherTile =
           </TimeWrapper>
           :
           future ?
-            <>
-              <WeatherWrapper>
-                <TimeWrapper>
-                  <Weekday>{getWeekday(date)}</Weekday>
-                  <StyledDate>{getDate(date)}</StyledDate>
-                </TimeWrapper>
-                {switchIcon(iconCode)}
-                <Temperature mini="true">
-                  <Label>Min</Label>
-                  {Math.round(minTemperature)}<TemperatureUnit mini="true" />
-                </Temperature>
-                <Temperature mini="true">
-                  <Label>Max</Label>
-                  {Math.round(maxTemperature)}<TemperatureUnit mini="true" />
-                </Temperature>
-                <ShowMoreButton dayNumber={dayNumber} />
-              </WeatherWrapper>
-            </>
+            <WeatherWrapper>
+              <TimeWrapper>
+                <Weekday>{getWeekday(date)}</Weekday>
+                <StyledDate>{getDate(date)}</StyledDate>
+              </TimeWrapper>
+              {switchIcon(iconCode)}
+              <Temperature mini="true">
+                <Label>Min</Label>
+                {Math.round(minTemperature)}<TemperatureUnit mini="true" />
+              </Temperature>
+              <Temperature mini="true">
+                <Label>Max</Label>
+                {Math.round(maxTemperature)}<TemperatureUnit mini="true" />
+              </Temperature>
+              <ShowMoreButton dayNumber={dayNumber} />
+            </WeatherWrapper>
             :
             (
               <Wrapper>

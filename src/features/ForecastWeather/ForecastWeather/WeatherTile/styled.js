@@ -67,7 +67,7 @@ export const DateWrapper = styled.div`
 
 export const StyledDate = styled.span`
   padding: 5px;
-  color: ${({ theme }) => theme.colors.textSecondary}
+  color: ${({ theme }) => theme.colors.textSecondary};
 `;
 
 export const Time = styled.span`

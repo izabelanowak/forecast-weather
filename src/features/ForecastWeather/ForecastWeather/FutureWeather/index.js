@@ -23,23 +23,23 @@ export const FutureWeather = () => {
         <MiniTileWrapper>
           <DayTile
             dayNumber={0}
-            general={true}
+            general
           />
           <DayTile
             dayNumber={1}
-            general={true}
+            general
           />
           <DayTile
             dayNumber={2}
-            general={true}
+            general
           />
           <DayTile
             dayNumber={3}
-            general={true}
+            general
           />
           <DayTile
             dayNumber={4}
-            general={true}
+            general
           />
         </MiniTileWrapper>
         <DayTile
