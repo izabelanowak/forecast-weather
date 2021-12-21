@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import { calculateAveragePressure, selectAveragePressure, selectWeather } from "../../ForecastWeatherSlice";
+import { calculateAveragePressure, selectAveragePressure } from "../../ForecastWeatherSlice";
 import { DataTile } from "../DataTile";
 import { Subtitle, Title, Wrapper } from "./styled";
-import { WeatherTile } from "../WeatherTile";
+import { DayTile } from "./DayTile";
 
 export const FutureWeather = () => {
-  const weather = useSelector(selectWeather);
   const averagePressure = useSelector(selectAveragePressure);
   const dispatch = useDispatch();
+
   dispatch(calculateAveragePressure());
   return (
     <>
@@ -19,16 +19,21 @@ export const FutureWeather = () => {
           subtitle="Average pressure for the week"
           data={`${averagePressure} hPa`}
         />
-        {weather.list.map(weather =>
-          <WeatherTile
-            key={weather.dt}
-            timestamp={weather.dt * 1000}
-            iconCode={weather.weather[0].icon}
-            temperature={weather.main.temp}
-            description={`${weather.weather[0].description}`}
-            future={true}
-          />
-        )}
+        <DayTile
+          dayNumber={0}
+        />
+        <DayTile
+          dayNumber={1}
+        />
+        <DayTile
+          dayNumber={2}
+        />
+        <DayTile
+          dayNumber={3}
+        />
+        <DayTile
+          dayNumber={4}
+        />
       </Wrapper>
     </>
   );

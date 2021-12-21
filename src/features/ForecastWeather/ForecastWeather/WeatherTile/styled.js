@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { ReactComponent as Celsius } from "./icons/celsius.svg";
 
 export const Wrapper = styled.div`
@@ -9,36 +9,33 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin: 0 10px;
+  margin: 10px;
   opacity: 0.8;
 `;
 
 export const WeatherWrapper = styled(Wrapper)`
   padding: 10px;
-  background: ${({ theme }) => theme.colors.white};
-  margin: 10px;
   font-weight: bold;
-  flex-direction: row;
 
   &:hover {
     box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.shadow};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-    flex-direction: column;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileSmall}px) {
+    flex-basis: 100%;
   }
 `;
 
 export const TimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin: 0 10px 0 0;
-  flex-basis: 150px;
+  align-items: center;
+  margin: 10px 10px 0 0;
+  font-size: 24px;
+  font-weight: bold;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
     align-items: center;
-    flex-basis: unset;
   }
 `;
 
@@ -65,6 +62,8 @@ export const StyledDate = styled.span`
 
 export const Time = styled.span`
   padding: 5px;
+  margin-top: 10px;
+  font-size: 24px;
 `;
 
 export const TemperatureUnit = styled(Celsius)`
@@ -77,26 +76,10 @@ export const Temperature = styled.div`
   justify-content: center;
   padding: 10px;
   font-weight: bold;
-
-  ${({ future }) => future && css`
-    flex-basis: 220px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-      flex-basis: unset;
-    }
-  `}
 `;
 
 export const Description = styled.p`
   font-size: 18px;
-  font-weight: bold;
   text-transform: capitalize;
-  
-  ${({ future }) => future && css`
-    flex-basis: 220px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
-      flex-basis: unset;
-    }
-  `}
+  font-weight: bold;
 `;
