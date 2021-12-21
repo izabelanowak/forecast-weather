@@ -6,7 +6,7 @@ export const DayTile = ({ dayNumber }) => {
   const weatherDay = useWatherDay(dayNumber);
 
   return (
-    <DayWrapper>
+    <>
       <WeatherTile
         key={weatherDay[0].dt + 1}
         timestamp={weatherDay[0].dt * 1000}
@@ -24,6 +24,6 @@ export const DayTile = ({ dayNumber }) => {
           />
         )}
       </MiniTileWrapper>
-    </DayWrapper>
+    </>
   );
 };
