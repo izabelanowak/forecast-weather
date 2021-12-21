@@ -26,6 +26,15 @@ export const WeatherWrapper = styled(Wrapper)`
   }
 `;
 
+export const HorizontalWrapper = styled(Wrapper)`
+  flex-direction: row;
+  flex-basis: 100%;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    flex-direction: column;
+  }
+`;
+
 export const TimeWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,7 +72,9 @@ export const StyledDate = styled.span`
 export const Time = styled.span`
   padding: 5px;
   margin-top: 10px;
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
 `;
 
 export const TemperatureUnit = styled(Celsius)`
@@ -91,6 +102,11 @@ export const Description = styled.p`
   font-size: 18px;
   text-transform: capitalize;
   font-weight: bold;
+
+  ${({ mini }) => mini && css`
+    font-size: 14px;
+    margin: 0;
+  `}
 `;
 
 export const Label = styled.span`
