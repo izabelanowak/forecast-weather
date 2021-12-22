@@ -1,7 +1,6 @@
 ## Preview of the website 
 # ![forecast-weather](./forecast-weather.jpg)
-=> [Click here](https://izabelanowak.github.io/forecast-weather/) to see my website demo.
-!
+=> [Click here](https://izabelanowak.github.io/forecast-weather/) to see my website demo!
 ## External source
 Api from [OpenWeather](https://openweathermap.org/forecast5)
 
