@@ -1,3 +1,68 @@
+## Preview of the website 
+# ![forecast-weather](./forecast-weather.jpg)
+=> [Click here](https://izabelanowak.github.io/forecast-weather/) to see my website demo.
+!
+## External source
+Api from [OpenWeather](https://openweathermap.org/forecast5)
+
+Icons from [Figma community](https://www.figma.com/community/file/972934576657989859)
+
+## Description
+There is a simple application that shows a 5-day forecast weather for a city by name. It shows the current weather and forecast for the following days every three hours.
+
+User enters the name of the city in the search field, and then weather data is downloaded from an external api. 
+Next weather information (temperature, weather icon, short weather description, humidity, pressure, precipitation probability, sunrise and sunset) is displayed on the screen.
+As a bonus, the average pressure for 5 days is calculated.
+Tiles with weather information for 5 days are generated below. There user can find information about the weather date, an icon, minimum and maximum temperature and the Show more button that takes the user to the hourly weather list of the selected day (data every 3 hours).
+At the top of the page, user can change the mode to day or night (the selected mode is saved in LocalStorage).
+
+
+## How to use
+See gif below to see how Forecast Weather works!
+
+![Gif demo](./demo.gif)
+
+## Used technologies: 
+- Semantic HTML
+- CSS, grid, flexbox
+- ES6+ features
+- React, create-react-app, 
+- react-hooks: useEffect, useRef, useSelector, useDispatch
+- custom Hook: useWeatherDay
+- Webpack
+- Babel
+- Redux, redux-toolkit, redux-saga
+- Styled Components (ThemeProvider)
+- Axios
+- theme light and dark
+- localStorage
+- responsively adapted application
+
+## Files structure:
+```markdown
+├───common
+│   └───ThemeSwitcher
+├───core
+│   └───App
+└───features
+    └───forecastWeather
+        └───ForecastWeather
+            ├───CityWeather
+            ├───DataTile
+            │   └───icons
+            ├───Error
+            ├───FutureWeather
+            │   └───DayTile
+            ├───Header
+            │   └───icons
+            ├───Loading
+            ├───MainContainer
+            ├───Search
+            ├───StatusChecker
+            └───WeatherTile
+                ├───icons
+                └───ShowMoreButton
+```
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,57 +79,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
