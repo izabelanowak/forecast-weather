@@ -1,3 +1,5 @@
+# Forecast Weather <img src="public/icon.png" width="40">
+
 ## Preview of the website 
 # ![forecast-weather](./forecast-weather.jpg)
 => [Click here](https://izabelanowak.github.io/forecast-weather/) to see my website demo!
