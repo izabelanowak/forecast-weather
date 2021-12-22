@@ -23,24 +23,26 @@ export const DayTile = ({ dayNumber, general }) => {
         dayNumber={dayNumber}
       />
       :
-      <MiniTileWrapper
-        id="hourly-forecast"
-        hide={!moreInformation}
-      >
-        <WeatherTile
-          day
-          timestamp={weatherDay[0].dt * 1000}
-        />
-        {weatherDay.map(({ dt, icon, temp, description }) => (
+      (<div id="hourly-forecast">
+        <MiniTileWrapper
+          hide={!moreInformation}
+        >
           <WeatherTile
-            key={dt}
-            timestamp={dt * 1000}
-            iconCode={icon}
-            temperature={temp}
-            description={description}
-            hourly
+            day
+            timestamp={weatherDay[0].dt * 1000}
           />
-        ))}
-      </MiniTileWrapper>
+          {weatherDay.map(({ dt, icon, temp, description }) => (
+            <WeatherTile
+              key={dt}
+              timestamp={dt * 1000}
+              iconCode={icon}
+              temperature={temp}
+              description={description}
+              hourly
+            />
+          ))}
+        </MiniTileWrapper>
+      </div>
+      )
   );
 };
