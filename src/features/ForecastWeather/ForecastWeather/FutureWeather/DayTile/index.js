@@ -2,21 +2,21 @@ import { useSelector } from "react-redux";
 import { selectMoreInformation } from "../../../ForecastWeatherSlice";
 import { WeatherTile } from "../../WeatherTile";
 import { MiniTileWrapper } from "../styled";
-import { useWatherDay } from "../useWeatherDay";
+import { useWeatherDay } from "../useWeatherDay";
 
 export const DayTile = ({ dayNumber, general }) => {
-  const weatherDay = useWatherDay(dayNumber).dayWeather;
-  const minDayTemperature = useWatherDay(dayNumber).minDayTemperature;
-  const maxDayTemperature = useWatherDay(dayNumber).maxDayTemperature;
-  const index = useWatherDay(dayNumber).maxIndex;
+  const weatherDay = useWeatherDay(dayNumber).dayWeather;
+  const minDayTemperature = useWeatherDay(dayNumber).minDayTemperature;
+  const maxDayTemperature = useWeatherDay(dayNumber).maxDayTemperature;
+  const index = useWeatherDay(dayNumber).maxIndex;
   const moreInformation = useSelector(selectMoreInformation);
 
   return (
     general ?
       <WeatherTile
-        key={weatherDay[0].dt}
-        timestamp={weatherDay[0].dt * 1000}
-        iconCode={weatherDay[index].icon}
+        key={!!weatherDay[index] ? weatherDay[index].dt : ""}
+        timestamp={!!weatherDay[index] ? weatherDay[index].dt * 1000 : 0}
+        iconCode={!!weatherDay[index] ? weatherDay[index].icon : ""}
         minTemperature={minDayTemperature}
         maxTemperature={maxDayTemperature}
         future
