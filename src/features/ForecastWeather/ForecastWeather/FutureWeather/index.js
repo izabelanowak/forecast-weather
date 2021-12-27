@@ -3,10 +3,12 @@ import { calculateAveragePressure, selectAveragePressure, selectDayNumber } from
 import { DataTile } from "../DataTile";
 import { MiniTileWrapper, Subtitle, Title, Wrapper } from "./styled";
 import { DayTile } from "./DayTile";
+import { getCurrentDate } from "./useWeatherDay";
 
 export const FutureWeather = () => {
   const averagePressure = useSelector(selectAveragePressure);
   const dayToShow = useSelector(selectDayNumber);
+  const currentHours = getCurrentDate().currentHours;
   const dispatch = useDispatch();
 
   dispatch(calculateAveragePressure());
@@ -37,10 +39,13 @@ export const FutureWeather = () => {
             dayNumber={3}
             general
           />
-          <DayTile
-            dayNumber={4}
-            general
-          />
+          {currentHours >= 22 ?
+            <></>
+            :
+            <DayTile
+              dayNumber={4}
+              general
+            />}
         </MiniTileWrapper>
         <DayTile
           dayNumber={dayToShow}
