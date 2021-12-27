@@ -8,7 +8,7 @@ import { getCurrentDate } from "./useWeatherDay";
 export const FutureWeather = () => {
   const averagePressure = useSelector(selectAveragePressure);
   const dayToShow = useSelector(selectDayNumber);
-  const currentHours = getCurrentDate().currentUTCHours;
+  const currentHours = getCurrentDate().currentHours;
   const dispatch = useDispatch();
 
   dispatch(calculateAveragePressure());

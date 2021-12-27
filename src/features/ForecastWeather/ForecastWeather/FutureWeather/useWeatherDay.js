@@ -12,7 +12,7 @@ export const getCurrentDate = () => {
     today: currentDate.getDate(),
     currentMonth: currentDate.getMonth(),
     currentYear: currentDate.getFullYear(),
-    currentUTCHours: currentDate.getUTCHours(),
+    currentHours: currentDate.getHours(),
   }
 };
 
@@ -20,20 +20,20 @@ const isDayNumber = (timestamp, dayNumber) => {
   const today = getCurrentDate().today;
   const currentMonth = getCurrentDate().currentMonth;
   const currentYear = getCurrentDate().currentYear;
-  const currentUTCHours = getCurrentDate().currentUTCHours;
+  const currentHours = getCurrentDate().currentHours;
   const date = new Date(timestamp * 1000);
   const day = date.getDate();
   const month = date.getMonth();
   const daysOfMonth = getDaysInMonth(currentMonth, currentYear);
 
-  if (currentUTCHours >= 22) {
+  if (currentHours >= 22) {
     dayNumber = dayNumber + 1;
   }
 
   if (currentMonth === month) {
     return day === today + dayNumber;
   }
-  return day + daysOfMonth === today + dayNumber;
+  return day + daysOfMonth === today + dayNumber - 1;
 };
 
 const createDay = (table, dayNumber) => {
