@@ -5,18 +5,28 @@ const getDaysInMonth = (month, year) => {
   return new Date(year, month, 0).getDate();
 };
 
-const isDayNumber = (timestamp, dayNumber) => {
+export const getCurrentDate = () => {
   const currentDate = new Date();
-  const today = currentDate.getDate();
-  const currentMonth = currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
-  const currentUTCHours = currentDate.getHours();
+
+  return {
+    today: currentDate.getDate(),
+    currentMonth: currentDate.getMonth(),
+    currentYear: currentDate.getFullYear(),
+    currentHours: currentDate.getHours(),
+  }
+};
+
+const isDayNumber = (timestamp, dayNumber) => {
+  const today = getCurrentDate().today;
+  const currentMonth = getCurrentDate().currentMonth;
+  const currentYear = getCurrentDate().currentYear;
+  const currentHours = getCurrentDate().currentHours;
   const date = new Date(timestamp * 1000);
   const day = date.getDate();
   const month = date.getMonth();
   const daysOfMonth = getDaysInMonth(currentMonth, currentYear);
 
-  if (currentUTCHours >= 22) {
+  if (currentHours >= 22) {
     dayNumber = dayNumber + 1;
   }
 
@@ -43,7 +53,7 @@ const createDay = (table, dayNumber) => {
   return [day, temperature];
 };
 
-export const useWatherDay = (dayNumber) => {
+export const useWeatherDay = (dayNumber) => {
   const weather = useSelector(selectWeather);
   const [dayWeather, dayTemperature] = createDay(weather.list, dayNumber);
   const minDayTemperature = Math.min(...dayTemperature);
