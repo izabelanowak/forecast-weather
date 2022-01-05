@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getAveragePressure } from "./ForecastWeather/average";
 
 const forecastWeatherSlice = createSlice({
   name: "forecastWeather",
@@ -36,15 +37,7 @@ const forecastWeatherSlice = createSlice({
       state.city = query;
     },
     calculateAveragePressure: (state) => {
-      const table = state.weather.list;
-      const arr = [];
-      for (const element of table) {
-        arr.push(element.main.pressure);
-      }
-      var sum = arr.reduce(function (previusValue, currentValue) {
-        return previusValue + currentValue;
-      });
-      state.averagePressure = (sum / arr.length).toFixed(1);
+      state.averagePressure = getAveragePressure(state.weather.list).toFixed(1);
     },
     showHourlyForecast: (state, { payload: dayNumber }) => {
       state.dayNumber = dayNumber;
